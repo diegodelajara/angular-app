@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sistema-angular"
+    }
+  },
+  "defaultProject": "sistema-angular",
+  "cli": {
+    "analytics": false
+  }
 }
