@@ -1,0 +1,27 @@
+<h2>
+  {{ title }}
+</h2>
+<span>
+  <ul>
+    <li>Nombre: {{ empleado.name }}</li>
+    <li>Edad: {{ empleado.age }}</li>
+    <li>Cargo: {{ empleado.position }}</li>
+    <li>Contratado: {{ empleado.isHired }}</li>
+  </ul>
+</span>
+
+<ul>
+  <li *ngFor="let empleado of empleados">
+    {{empleado.name}} - {{empleado.position}}
+  </li>
+</ul>
+
+<button (click)="changeColor('red')">Rojo</button>
+<button (click)="changeColor('green')">Verde</button>
+<button (click)="changeColor('blue')">Blue</button>
+
+<div [ngSwitch]="color">
+  <span style="color: green;" *ngSwitchCase="'green'">Verde</span>
+  <span style="color: blue;" *ngSwitchCase="'blue'">Azul</span>
+  <span style="color: red;" *ngSwitchCase="'red'">Rojo</span>
+</div>
