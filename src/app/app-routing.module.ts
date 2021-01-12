@@ -8,10 +8,11 @@ import { HomeComponent } from "./components/home/home.component"
 import { ContactComponent } from "./components/contact/contact.component"
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'empleados', component: EmployeesComponent },
   { path: 'frutas', component: FrutaComponent },
   { path: 'contacto', component: ContactComponent },
+  { path: 'contacto/:id', component: ContactComponent },
   { path: '**', component: EmployeesComponent }
 ];
 

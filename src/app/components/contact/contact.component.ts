@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from "@angular/router";
 
 @Component({
   selector: 'contact',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  public param:any
 
-  constructor() { }
+  constructor(
+    private _route: ActivatedRoute,
+    private _router: Router
+  ){}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this._route.params.forEach((params:Params) => this.param = params['id'])
   }
 
 }
